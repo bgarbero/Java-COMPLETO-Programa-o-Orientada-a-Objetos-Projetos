@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module exercicioFixacaoEstruturaSequencial2 {
+}
