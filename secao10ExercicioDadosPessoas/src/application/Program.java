@@ -27,36 +27,37 @@ public class Program {
 			people[i] = new People(altura, sexo);
 		}
 		
-		double menorAltura = 1000;
-		double maiorAltura = 0;
-		double mediaAlturaM = 0;
-		int somaDeTodasAsMulheres = 0;
-		double somaDasAlturasDasMulheres = 0;
+		double menorAltura = people[0].getAltura();
+		double maiorAltura = people[0].getAltura();
+		double mediaAlturaFeminina;
+		int totalDoSexoFeminino = 0;
+		double somaDasAlturasFemininas = 0;
 		int numeroDeHomens = 0;
 		
 		for (int i = 0; i < people.length; i++) {
+			
 			if (people[i].getAltura() > maiorAltura) {
 				maiorAltura = people[i].getAltura(); 
+				
 			} else if (people[i].getAltura() < menorAltura) {
 				menorAltura = people[i].getAltura();
+				
 			} else if (people[i].getSexo() == 'F') {
-				somaDeTodasAsMulheres += 1;
-				somaDasAlturasDasMulheres += people[i].getAltura();
+				totalDoSexoFeminino += 1;
+				somaDasAlturasFemininas += people[i].getAltura();
 			}
+			
 			if (people[i].getSexo() == 'M') {
 					numeroDeHomens += 1;
 			}
 		}
 		
-		mediaAlturaM = somaDasAlturasDasMulheres / somaDeTodasAsMulheres;
+		mediaAlturaFeminina = somaDasAlturasFemininas / totalDoSexoFeminino;
 		
-		System.out.printf("Menor altura = %.2f", menorAltura);
-		System.out.println();
-		System.out.printf("Maior altura = %.2f", maiorAltura);
-		System.out.println();
-		System.out.printf("Media das alturas das mulheres = %.2f", mediaAlturaM);
-		System.out.println();
-		System.out.printf("Numero de homens = %d", numeroDeHomens);
+		System.out.printf("Menor altura = %.2f%n", menorAltura);
+		System.out.printf("Maior altura = %.2f%n", maiorAltura);
+		System.out.printf("Media das alturas das mulheres = %.2f%n", mediaAlturaFeminina);
+		System.out.printf("Numero de homens = %d%n", numeroDeHomens);
 
 		sc.close();
 	}

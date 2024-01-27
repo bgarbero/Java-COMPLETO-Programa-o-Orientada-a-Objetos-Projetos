@@ -5,7 +5,6 @@ public class Aluguel {
 	private String email;
 
 	public Aluguel(String name, String email) {
-		super();
 		this.name = name;
 		this.email = email;
 	}
