@@ -16,7 +16,7 @@ public class Program {
 		
 		People[] people = new People[n];
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < people.length; i++) {
 			System.out.print("Altura da "+(i+1)+"a pessoa: ");
 			double altura = sc.nextDouble();
 			sc.nextLine();
